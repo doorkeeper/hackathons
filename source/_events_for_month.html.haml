@@ -1,0 +1,53 @@
+.subheader
+  .container
+    %h2= dmy(date)
+.container.main-content
+  .row
+    .col-md-8.col-md-offset-2
+      .events
+        - events_for_month(*date).each do |event|
+          .event
+            %h3= event.title
+            %small
+            %dl.dl-horizontal
+              %dt 日時
+              %dd=simple_format event.date_info
+              %dt 場所
+              %dd= simple_format event.address
+              - if event.price
+                %dt 参加費
+                %dd
+                  %p
+                    - if event.free?
+                      無料
+                    - else
+                      = yen event.price
+              - if event.target
+                %dt 対象
+                %dd= simple_format event.target
+              - if event.tags
+                %dt タグ
+                %dd
+                  - event.tags.each do |tag|
+                    %span.label.label-info= tag
+              - if event.prize
+                %dt 賞
+                %dd= simple_format event.prize
+              - if event.description
+                %dt 概要
+                %dd= simple_format event.description
+              %dt URL
+              %dd= link_to event.url, event.url
+      %ul.pager
+        - prev = date.months_ago(1)
+        - disabled = events_for_month(prev).blank?
+        - path = Date.today.beginning_of_month == prev ? "/" : (disabled ? "#" : month_path(prev))
+        %li.previous{class: disabled ? :disabled : nil}
+          = link_to path do
+            &larr; #{dmy(prev)}
+        - next_month = date.months_ago(-1)
+        - disabled = events_for_month(next_month).blank?
+        - path = Date.today.beginning_of_month == next_month ? "/" : (disabled ? "#" : month_path(next_month))
+        %li.next{class: disabled ? :disabled : nil}
+          = link_to disabled ? "#" : path do
+            #{dmy(next_month)} &rarr;

@@ -1,0 +1,3 @@
+- content_for :title, "ハッカソンイベント、ハッカソンカレンダー"
+
+= partial :events_for_month, locals: { date: Date.today.beginning_of_month }

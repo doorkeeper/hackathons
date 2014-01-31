@@ -1,0 +1,3 @@
+- content_for :title, "#{dmy(date)}のハッカソン"
+
+= partial :events_for_month, locals: { date: date }
