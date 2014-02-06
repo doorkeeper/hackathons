@@ -1,7 +1,7 @@
 require 'active_support/core_ext/date/calculations'
 
 class Event
-  ATTRS = %w{starts_on date_info title description price address target tags prize url}
+  ATTRS = %w{starts_on date_info title description price address target prize url}
   attr_reader *ATTRS
 
   def initialize(args)

@@ -14,7 +14,7 @@
               %dd=simple_format event.date_info
               %dt 場所
               %dd= simple_format event.address
-              - if event.price
+              - if event.price.present?
                 %dt 参加費
                 %dd
                   %p
@@ -22,18 +22,13 @@
                       無料
                     - else
                       = yen event.price
-              - if event.target
+              - if event.target.present?
                 %dt 対象
                 %dd= simple_format event.target
-              - if event.tags
-                %dt タグ
-                %dd
-                  - event.tags.each do |tag|
-                    %span.label.label-info= tag
-              - if event.prize
+              - if event.prize.present?
                 %dt 賞
                 %dd= simple_format event.prize
-              - if event.description
+              - if event.description.present?
                 %dt 概要
                 %dd= md_to_html event.description
               %dt URL
