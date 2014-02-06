@@ -13,3 +13,4 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem 'bootstrap-sass', '~> 3.1.0'
 gem 'tzinfo'
 gem "middleman-deploy"
+gem "redcarpet"

@@ -35,7 +35,7 @@
                 %dd= simple_format event.prize
               - if event.description
                 %dt 概要
-                %dd= simple_format event.description
+                %dd= md_to_html event.description
               %dt URL
               %dd= link_to event.url, event.url
       %ul.pager

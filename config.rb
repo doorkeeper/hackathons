@@ -54,6 +54,13 @@ helpers do
   def yen(i)
     "#{i}円"
   end
+
+  def md_to_html(plain)
+    @markdown ||=
+      Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(:hard_wrap => true), :autolink => true, :lax_html_blocks => true, tables: true, no_intra_emphasis: true)
+    @markdown.render(plain.to_s)
+  end
+
 end
 
 set :css_dir, 'stylesheets'
