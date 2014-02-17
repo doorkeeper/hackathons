@@ -1,0 +1,34 @@
+title: 第1回アカツキハッカソン ：お題「光ｘエンタメ」（アイデアソン）
+starts_on: 2014-03-13
+date_info: |
+  2014年3月13日 18:30〜22:00
+url: "http://akatsuki.doorkeeper.jp/events/9061"
+address: 株式会社アカツキ ( 〒153-0051　東京都目黒区上目黒1-1-5　第二育良ビル3階 )
+target: |
+  ハッカソン・アイデアソン共に、エンジニア以外でも参加ができます。（ハッカソン本番でも、デザインやアイデア出し、コンテンツ作成などのタスクがありますので、エンジニア以外でもお気軽にご参加下さい。）
+prize: |
+description: |
+  ※3/23に行われる[ハッカソン](http://akatsuki.doorkeeper.jp/events/9077)の為のアイデアを出す、「アイデアソン」です。ハッカソンへの参加には[別途申し込み](http://akatsuki.doorkeeper.jp/events/9077)が必要です。
+  アイデアソンのみの参加も可能ですが、ハッカソンへの参加を前提とした参加を推奨します。
+
+  #### 「光ｘエンタメ」
+
+  お題は「光ｘエンタメ」です。光で空間をハックして、エンタメ空間をデザインするハッカソンを行います。
+  利用ツールはずばり、「[Philips hue](http://www.meethue.com/ja-JP)」。スマートフォンやタブレットのアプリだけでなく、APIからも照明をコントロールできる、全く新しい照明システムです。1600万色を超える色彩表現と高い拡張性を持つこのhueを使って、今までにない空間づくりをしちゃいましょう。
+  今回、フィリップスエレクトロニクス株式会社の全面協力の元、ハッカソン会場にhueのデモ機を持ってきていただきます。
+
+  アイデアソンでは、ハッカソン前のアイデア出し及びチームビルディングを行う予定であり、開発は行いません。
+
+  hue 紹介動画
+  <a href="http://www.youtube.com/watch?v=DD3leoHqKCk#t=29" target="_blank"><img src="https://dl.dropboxusercontent.com/u/442212/georepublic/hue_screenshot.png" alt="hue movie" width="480" height="270" border="10" /></a>
+
+  Hue Disco trailer
+  <a href="http://www.youtube.com/watch?v=WjXzdmjPMhU" target="_blank"><img src="https://dl.dropboxusercontent.com/u/442212/georepublic/dicso.png" alt="hue disco" width="480" height="270" border="10" /></a>
+
+  #### スケジュール（予定）
+  * 18:30 開場
+  * 19:00〜19:30 開始、ブリーフィング
+  * 19:30〜20:00 個人アイデアワーク
+  * 20:00〜21:00 ペアアイデアワーク＆アイデア投票
+  * 21:00〜21:45 チームビルディング、チームブレスト、発表
+  * 21:45〜22:00 クロージング
