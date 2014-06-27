@@ -10,7 +10,7 @@
             %h3.event-title
               = link_to event_path(event), itemprop: "url" do
                 %span(itemprop="summary")= event.title
-          = partial :event, locals: { event: event }
+            = partial :event, locals: { event: event }
       %ul.pager
         - prev = date.months_ago(1)
         - disabled = events_for_month(prev).blank?
