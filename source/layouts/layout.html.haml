@@ -17,7 +17,9 @@
         %a{href: "https://github.com/doorkeeper/hackathons", rel: "nofollow"} Fork me on GitHub
     %header
       .container
-        %h1 Hackathons!
+        %h1
+          = link_to "/" do
+            Hackathons!
       %p.lead
         ハッカソン イベント一覧
     = yield
