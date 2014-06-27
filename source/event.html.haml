@@ -1,3 +1,12 @@
-- content_for :title, "#{dmy(date)}のハッカソン"
+- content_for :title, event.title
 
-= partial :events_for_month, locals: { date: date }
+%div
+  .subheader
+    .container
+      %h2= event.title
+  .container.main-content
+    .row
+      .col-md-8.col-md-offset-2
+        .events
+          .event
+            = partial :event, locals: { event: event }

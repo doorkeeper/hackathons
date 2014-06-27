@@ -1,7 +1,7 @@
 require 'active_support/core_ext/date/calculations'
 
 class Event
-  ATTRS = %w{starts_on date_info title description price address target prize url}
+  ATTRS = %w{id starts_on date_info title description price address target prize url}
   attr_reader *ATTRS
 
   def initialize(args)
@@ -17,7 +17,7 @@ end
 module EventHelper
   def events
     data.events.map do |k,v|
-      Event.new({id: k}.merge(v))
+      Event.new({"id" => k}.merge(v))
     end
   end
 
@@ -33,12 +33,20 @@ module EventHelper
   def month_path(date)
     "/events/#{date.year}/#{date.month}/"
   end
+
+  def event_path(event)
+    "/events/#{event.id}/index.html"
+  end
 end
 
 extend EventHelper
 
 events_by_month.each do |d, events|
-  proxy File.join(month_path(d), "index.html"), "/event.html", :locals => { date: d }, ignore: true
+  proxy File.join(month_path(d), "index.html"), "/event_by_date.html", :locals => { date: d }, ignore: true
+end
+
+events.each do |event|
+  proxy event_path(event), "/event.html", :locals => { event: event }, ignore: true
 end
 
 activate :i18n, mount_at_root: :ja

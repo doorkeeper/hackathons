@@ -7,34 +7,10 @@
       .events
         - events_for_month(*date).each do |event|
           .event(itemscope itemtype="http://data-vocabulary.org/Event")
-            %h3(itemprop="summary")= event.title
-            %small
-            %dl.dl-horizontal
-              %dt 日時
-              %dd
-                %time{itemprop: "startDate", datetime: event.starts_on.iso8601}= simple_format event.date_info
-              %dt 場所
-              %dd(itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization")
-                %span(itemprop="address")= simple_format event.address
-              - if event.price.present?
-                %dt 参加費
-                %dd
-                  %p
-                    - if event.free?
-                      無料
-                    - else
-                      = yen event.price
-              - if event.target.present?
-                %dt 対象
-                %dd= simple_format event.target
-              - if event.prize.present?
-                %dt 賞
-                %dd= simple_format event.prize
-              - if event.description.present?
-                %dt 概要
-                %dd= md_to_html event.description
-              %dt URL
-              %dd= link_to event.url, event.url, itemprop: "url"
+            %h3.event-title
+              = link_to event_path(event), itemprop: "url" do
+                %span(itemprop="summary")= event.title
+          = partial :event, locals: { event: event }
       %ul.pager
         - prev = date.months_ago(1)
         - disabled = events_for_month(prev).blank?
