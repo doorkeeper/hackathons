@@ -6,14 +6,16 @@
     .col-md-8.col-md-offset-2
       .events
         - events_for_month(*date).each do |event|
-          .event
-            %h3= event.title
+          .event(itemscope itemtype="http://data-vocabulary.org/Event")
+            %h3(itemprop="summary")= event.title
             %small
             %dl.dl-horizontal
               %dt 日時
-              %dd=simple_format event.date_info
+              %dd
+                %time{itemprop: "startDate", datetime: event.starts_on.iso8601}= simple_format event.date_info
               %dt 場所
-              %dd= simple_format event.address
+              %dd(itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization")
+                %span(itemprop="address")= simple_format event.address
               - if event.price.present?
                 %dt 参加費
                 %dd
@@ -32,7 +34,7 @@
                 %dt 概要
                 %dd= md_to_html event.description
               %dt URL
-              %dd= link_to event.url, event.url
+              %dd= link_to event.url, event.url, itemprop: "url"
       %ul.pager
         - prev = date.months_ago(1)
         - disabled = events_for_month(prev).blank?
