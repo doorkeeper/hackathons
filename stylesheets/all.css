@@ -6301,69 +6301,80 @@ header {
   header h1 {
     font-size: 5em;
     font-family: "Londrina Solid", cursive; }
+    /* line 10, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+    header h1 a {
+      color: white;
+      text-decoration: none; }
+      /* line 13, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+      header h1 a:hover {
+        text-decoration: none; }
 
-/* line 10, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+/* line 15, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
 .subheader {
   text-align: center;
   background-color: #79bd9a;
   border-bottom: 2px solid #6ca989;
   padding-bottom: 3px; }
 
-/* line 15, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+/* line 20, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
 .subfooter {
   text-align: center;
   background-color: #79bd9a;
   border-top: 2px solid #6ca989;
   padding: 20px 0; }
-  /* line 20, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+  /* line 25, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
   .subfooter .subfooter-callout {
     font-size: 1.3em; }
 
-/* line 22, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+/* line 27, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
 .main-content {
   padding: 10px 0; }
 
-/* line 24, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+/* line 29, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
 footer {
   padding: 20px 0;
   background-color: #3b8686;
   border-top: 2px solid #347777;
   text-align: center;
   color: white; }
-  /* line 30, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+  /* line 35, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
   footer a {
     color: white;
     text-decoration: underline;
     font-size: 1.1em; }
-    /* line 34, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+    /* line 39, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
     footer a:hover {
       color: #f0f0f0; }
 
-/* line 36, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+/* line 41, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
 .events {
   margin-bottom: 40px; }
-  /* line 38, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+  /* line 43, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
   .events dl.dl-horizontal dd {
     color: #444444; }
-  /* line 40, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+  /* line 45, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
   .events h3 {
     margin-bottom: 15px; }
   @media (min-width: 768px) {
-    /* line 45, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+    /* line 50, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
     .events .dl-horizontal dt {
       width: 60px;
       text-align: left; }
-    /* line 48, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+    /* line 53, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
     .events .dl-horizontal dd {
       margin-left: 70px; } }
 
-/* line 51, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+/* line 56, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
 .event {
   margin-top: 20px;
   border-top: 1px solid #cccccc; }
-  /* line 54, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+  /* line 59, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
   .event:first-child {
     border-top: none; }
+  /* line 61, /Users/pm/hackathons/source/stylesheets/hackathons.css.sass */
+  .event .event-title a {
+    color: #333333;
+    text-decoration: none; }
 /* Left will inherit from right (so we don't need to duplicate code) */
 
 .github-fork-ribbon {
