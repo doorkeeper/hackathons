@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    puma (2.9.1)
+      rack (>= 1.1, < 2.0)
+    rack (1.6.4)
+    rack-rewrite (1.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  puma
+  rack-rewrite (~> 1.5.0)
+
+BUNDLED WITH
+   1.10.6
